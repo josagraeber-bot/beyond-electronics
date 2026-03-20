@@ -1285,13 +1285,15 @@
     <div class="modal-title">beyond electronics Salon</div>
     <p class="modal-desc">Was passiert, wenn Ressourcen, Fertigung und Zusammenarbeit wirklich greifen. Ca. 50 Personen, München. Der genaue Veranstaltungsort wird in Kürze bekannt gegeben. Die Anmeldung öffnet demnächst.</p>
     <p class="modal-note" style="margin-top:1rem;">Trag Dich in die Liste ein, um informiert zu werden, sobald die Anmeldung öffnet.</p>
-    <div class="modal-form" style="margin-top:1.5rem;">
-      <input class="modal-input" type="text" placeholder="Vorname, Name">
-      <input class="modal-input" type="text" placeholder="Unternehmen & Position">
-      <input class="modal-input" type="email" placeholder="E-Mail-Adresse">
-      <button class="modal-submit" onclick="handleSubmit(event)">Auf die Warteliste →</button>
+    <form class="modal-form" style="margin-top:1.5rem;" name="warteliste-salon" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleNetlifySubmit(event, 'modal-salon1')">
+      <input type="hidden" name="form-name" value="warteliste-salon">
+      <input type="hidden" name="bot-field" style="display:none">
+      <input class="modal-input" type="text" name="name" placeholder="Vorname, Name" required>
+      <input class="modal-input" type="text" name="unternehmen" placeholder="Unternehmen & Position">
+      <input class="modal-input" type="email" name="email" placeholder="E-Mail-Adresse" required>
+      <button class="modal-submit" type="submit">Auf die Warteliste →</button>
       <p class="modal-note">Du erhältst eine Benachrichtigung, sobald die Anmeldung öffnet.</p>
-    </div>
+    </form>
   </div>
 </div>
 
@@ -1301,13 +1303,15 @@
     <div class="modal-tag">beyond electronics · Updates</div>
     <div class="modal-title">Immer als<br>Erstes informiert</div>
     <p class="modal-desc">Trag Dich ein und erhalte Benachrichtigungen zu neuen Terminen, Speakern und Inhalten aus dem beyond electronics Ökosystem.</p>
-    <div class="modal-form">
-      <input class="modal-input" type="text" placeholder="Vorname, Name">
-      <input class="modal-input" type="text" placeholder="Unternehmen & Position">
-      <input class="modal-input" type="email" placeholder="E-Mail-Adresse">
-      <button class="modal-submit" onclick="handleSubmit(event)">Eintragen →</button>
+    <form class="modal-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleNetlifySubmit(event, 'modal-newsletter')">
+      <input type="hidden" name="form-name" value="newsletter">
+      <input type="hidden" name="bot-field" style="display:none">
+      <input class="modal-input" type="text" name="name" placeholder="Vorname, Name" required>
+      <input class="modal-input" type="text" name="unternehmen" placeholder="Unternehmen & Position">
+      <input class="modal-input" type="email" name="email" placeholder="E-Mail-Adresse" required>
+      <button class="modal-submit" type="submit">Eintragen →</button>
       <p class="modal-note">Kein Spam. Nur relevante Updates aus dem Ökosystem.</p>
-    </div>
+    </form>
   </div>
 </div>
 
@@ -1341,21 +1345,33 @@
     }
   }
 
-  function handleSubmit(event) {
+  function handleNetlifySubmit(event, modalId) {
     event.preventDefault();
-    const modal = event.target.closest('.modal');
-    const btn = event.target;
-    btn.textContent = '✓ Eingetragen';
-    btn.style.background = 'rgba(130,255,0,0.15)';
-    btn.style.color = 'var(--neon)';
-    btn.style.border = '1px solid var(--neon)';
-    setTimeout(() => {
-      const overlay = modal.closest('.modal-overlay');
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-      btn.textContent = 'Auf die Warteliste →';
-      btn.style = '';
-    }, 1800);
+    const form = event.target;
+    const btn = form.querySelector('.modal-submit');
+    const data = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(() => {
+      btn.textContent = '✓ Eingetragen';
+      btn.style.background = 'rgba(130,255,0,0.15)';
+      btn.style.color = 'var(--neon)';
+      btn.style.border = '1px solid var(--neon)';
+      form.reset();
+      setTimeout(() => {
+        document.getElementById(modalId).classList.remove('open');
+        document.body.style.overflow = '';
+        btn.textContent = btn.dataset.originalText || 'Eintragen →';
+        btn.style = '';
+      }, 1800);
+    })
+    .catch(() => {
+      btn.textContent = 'Fehler – bitte nochmal versuchen';
+    });
   }
 
   // Keyboard close

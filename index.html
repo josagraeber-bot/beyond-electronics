@@ -5,24 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>beyond electronics – Zukunftsperspektiven für die Elektronikindustrie in Europa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,800;0,9..40,900;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,800;0,9..40,900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --violet: #321464;
     --neon: #82ff00;
     --light-violet: #aa78f0;
     --white: #f5f2ee;
-    --mid: rgba(245,242,238,0.55);
+    --mid: #f5f2ee;
     --dark: #1a0a38;
 
     /* Three font sizes only */
-    --fs-large: clamp(2.2rem, 5vw, 5rem);
-    --fs-body: 1rem;
-    --fs-small: 0.75rem;
+    --fs-large: clamp(2.2rem, 4vw, 4rem);
+    --fs-medium: clamp(1.4rem, 2.5vw, 1.9rem);
+    --fs-body: 1.1rem;
+    --fs-small: 0.85rem;
 
     /* Fonts */
-    --font-display: 'DM Sans', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'TWKEverett', sans-serif;
+    --font-body: 'TWKEverett', sans-serif;
     --font-mono: 'DM Mono', monospace;
   }
 
@@ -35,7 +36,8 @@
     color: var(--white);
     font-family: var(--font-body);
     font-weight: 400;
-    line-height: 1.6;
+    font-size: var(--fs-body);
+    line-height: 1.65;
     overflow-x: hidden;
   }
 
@@ -55,7 +57,7 @@
 
   .nav-logo {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -69,7 +71,7 @@
   }
 
   .nav-links a {
-    color: rgba(245,242,238,0.75);
+    color: var(--white);
     text-decoration: none;
     font-size: var(--fs-small);
     letter-spacing: 0.05em;
@@ -116,7 +118,7 @@
 
   .hero-eyebrow {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -151,7 +153,7 @@
 
   .hero-sub {
     font-size: var(--fs-body);
-    color: rgba(245,242,238,0.8);
+    color: var(--white);
     max-width: 38ch;
     margin: 1.8rem 0 3rem;
     line-height: 1.7;
@@ -164,7 +166,7 @@
     background: var(--neon);
     color: var(--dark);
     padding: 0.85rem 2rem;
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -204,14 +206,14 @@
   .hero-stat-num {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: var(--fs-large);
     color: var(--neon);
     line-height: 1;
   }
 
   .hero-stat-label {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.75);
+    color: var(--white);
     letter-spacing: 0.05em;
   }
 
@@ -225,9 +227,9 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    color: var(--mid);
+    color: var(--white);
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
@@ -249,7 +251,7 @@
 
   .section-label {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -316,9 +318,9 @@
 
   .storyline-body {
     max-width: 65ch;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
-    color: rgba(245,242,238,0.88);
+    color: var(--white);
     margin-top: -3rem;
     margin-bottom: 4rem;
   }
@@ -330,7 +332,7 @@
   .storyline-h3 {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.3rem;
+    font-size: var(--fs-body);
     letter-spacing: 0.05em;
     color: var(--light-violet);
     margin: 2rem 0 0.75rem;
@@ -345,7 +347,7 @@
 
   .storyline-q-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -354,7 +356,7 @@
   }
 
   .storyline-question p {
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     color: var(--white);
     font-weight: 400;
     line-height: 1.6;
@@ -380,7 +382,7 @@
     position: absolute;
     left: 0;
     color: var(--neon);
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
   }
 
   .storyline-for-whom {
@@ -398,7 +400,7 @@
 
   .storyline-for-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -406,14 +408,14 @@
   }
 
   .storyline-for-block p {
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     margin: 0;
   }
 
   .storyline-cta-text {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: var(--fs-medium);
     color: var(--white) !important;
     letter-spacing: 0.03em;
     margin-top: 2rem !important;
@@ -421,8 +423,8 @@
 
   .hf-sub {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin: 1rem 0 0.5rem;
@@ -436,7 +438,7 @@
 
   .hf-impact-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: var(--fs-small);
     color: var(--light-violet);
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -462,7 +464,7 @@
 
   .hf-tag {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -475,7 +477,7 @@
   .hf-initial {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 5rem;
+    font-size: var(--fs-large);
     line-height: 1;
     color: rgba(130,255,0,0.08);
     position: absolute;
@@ -487,15 +489,15 @@
   .hf-title {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: var(--fs-medium);
     letter-spacing: 0.03em;
     margin-bottom: 1rem;
     line-height: 1;
   }
 
   .hf-desc {
-    font-size: 0.88rem;
-    color: rgba(245,242,238,0.88);
+    font-size: var(--fs-body);
+    color: var(--white);
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
@@ -509,7 +511,7 @@
 
   .hf-outcomes li {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.85);
+    color: var(--white);
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
@@ -518,7 +520,7 @@
   .hf-outcomes li::before {
     content: '→';
     color: var(--neon);
-    font-size: 0.7rem;
+    font-size: var(--fs-small);
     margin-top: 0.1rem;
     flex-shrink: 0;
   }
@@ -577,7 +579,7 @@
 
   .step-date {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.1em;
     margin-bottom: 0.75rem;
@@ -585,7 +587,7 @@
 
   .step-num {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.15em;
     margin-bottom: 0.75rem;
@@ -595,22 +597,22 @@
   .step-format {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 2.2rem;
+    font-size: var(--fs-medium);
     letter-spacing: 0.02em;
     line-height: 1;
     margin-bottom: 0.5rem;
   }
 
   .step-theme {
-    font-size: 0.78rem;
-    color: var(--light-violet);
+    font-size: var(--fs-small);
+    color: var(--white);
     margin-bottom: 1rem;
-    font-style: italic;
+    
   }
 
   .step-desc {
-    font-size: 0.85rem;
-    color: rgba(245,242,238,0.75);
+    font-size: var(--fs-small);
+    color: var(--white);
     line-height: 1.65;
   }
 
@@ -657,15 +659,15 @@
   .event-day {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 3rem;
+    font-size: var(--fs-large);
     line-height: 1;
     color: var(--neon);
   }
 
   .event-month {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
@@ -682,7 +684,7 @@
   }
 
   .event-title {
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     font-weight: 500;
     margin-bottom: 0.3rem;
     color: var(--white);
@@ -690,7 +692,7 @@
 
   .event-meta {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.7);
+    color: var(--white);
   }
 
   .event-action {
@@ -705,7 +707,7 @@
     border: 1px solid var(--neon);
     color: var(--neon);
     padding: 0.6rem 1.4rem;
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -720,8 +722,8 @@
   }
 
   .btn-register.soon {
-    border-color: var(--mid);
-    color: var(--mid);
+    border-color: var(--white);
+    color: var(--white);
     pointer-events: none;
   }
 
@@ -764,8 +766,8 @@
   .ecosystem-text .section-title { margin-bottom: 1.5rem; }
 
   .ecosystem-body {
-    font-size: 0.95rem;
-    color: rgba(245,242,238,0.88);
+    font-size: var(--fs-body);
+    color: var(--white);
     line-height: 1.75;
     margin-bottom: 2rem;
   }
@@ -787,8 +789,8 @@
     padding: 1.2rem 1rem;
     text-align: center;
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     letter-spacing: 0.05em;
     transition: background 0.2s, color 0.2s;
   }
@@ -816,7 +818,7 @@
 
   .footer-logo {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -824,7 +826,7 @@
 
   .footer-sub {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.65);
+    color: var(--white);
   }
 
   .footer-links {
@@ -835,7 +837,7 @@
 
   .footer-links a {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.65);
+    color: var(--white);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -881,8 +883,8 @@
     right: 1.5rem;
     background: none;
     border: none;
-    color: var(--mid);
-    font-size: 1.2rem;
+    color: var(--white);
+    font-size: var(--fs-body);
     cursor: pointer;
     transition: color 0.2s;
   }
@@ -891,7 +893,7 @@
 
   .modal-tag {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -901,14 +903,14 @@
   .modal-title {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 2rem;
+    font-size: var(--fs-medium);
     margin-bottom: 1rem;
     line-height: 1;
   }
 
   .modal-desc {
-    font-size: 0.88rem;
-    color: rgba(245,242,238,0.88);
+    font-size: var(--fs-body);
+    color: var(--white);
     line-height: 1.65;
     margin-bottom: 2rem;
   }
@@ -925,12 +927,12 @@
     color: var(--white);
     padding: 0.8rem 1rem;
     font-family: var(--font-body);
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     outline: none;
     transition: border-color 0.2s;
   }
 
-  .modal-input::placeholder { color: var(--mid); }
+  .modal-input::placeholder { color: var(--white); }
   .modal-input:focus { border-color: var(--neon); }
 
   .modal-submit {
@@ -939,7 +941,7 @@
     border: none;
     padding: 0.9rem;
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -953,8 +955,8 @@
   }
 
   .modal-note {
-    font-size: 0.72rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     text-align: center;
   }
 
@@ -993,7 +995,7 @@
 
   .section-label {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1060,9 +1062,9 @@
 
   .storyline-body {
     max-width: 65ch;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     line-height: 1.8;
-    color: rgba(245,242,238,0.88);
+    color: var(--white);
     margin-top: -3rem;
     margin-bottom: 4rem;
   }
@@ -1074,7 +1076,7 @@
   .storyline-h3 {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.3rem;
+    font-size: var(--fs-body);
     letter-spacing: 0.05em;
     color: var(--light-violet);
     margin: 2rem 0 0.75rem;
@@ -1089,7 +1091,7 @@
 
   .storyline-q-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1098,7 +1100,7 @@
   }
 
   .storyline-question p {
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     color: var(--white);
     font-weight: 400;
     line-height: 1.6;
@@ -1124,7 +1126,7 @@
     position: absolute;
     left: 0;
     color: var(--neon);
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
   }
 
   .storyline-for-whom {
@@ -1142,7 +1144,7 @@
 
   .storyline-for-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1150,14 +1152,14 @@
   }
 
   .storyline-for-block p {
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     margin: 0;
   }
 
   .storyline-cta-text {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: var(--fs-medium);
     color: var(--white) !important;
     letter-spacing: 0.03em;
     margin-top: 2rem !important;
@@ -1165,8 +1167,8 @@
 
   .hf-sub {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin: 1rem 0 0.5rem;
@@ -1180,7 +1182,7 @@
 
   .hf-impact-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: var(--fs-small);
     color: var(--light-violet);
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1206,7 +1208,7 @@
 
   .hf-tag {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1219,7 +1221,7 @@
   .hf-initial {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 5rem;
+    font-size: var(--fs-large);
     line-height: 1;
     color: rgba(130,255,0,0.08);
     position: absolute;
@@ -1231,15 +1233,15 @@
   .hf-title {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: var(--fs-medium);
     letter-spacing: 0.03em;
     margin-bottom: 1rem;
     line-height: 1;
   }
 
   .hf-desc {
-    font-size: 0.88rem;
-    color: rgba(245,242,238,0.88);
+    font-size: var(--fs-body);
+    color: var(--white);
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
@@ -1253,7 +1255,7 @@
 
   .hf-outcomes li {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.85);
+    color: var(--white);
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
@@ -1262,7 +1264,7 @@
   .hf-outcomes li::before {
     content: '→';
     color: var(--neon);
-    font-size: 0.7rem;
+    font-size: var(--fs-small);
     margin-top: 0.1rem;
     flex-shrink: 0;
   }
@@ -1321,7 +1323,7 @@
 
   .step-date {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.1em;
     margin-bottom: 0.75rem;
@@ -1329,7 +1331,7 @@
 
   .step-num {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.15em;
     margin-bottom: 0.75rem;
@@ -1339,22 +1341,22 @@
   .step-format {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 2.2rem;
+    font-size: var(--fs-medium);
     letter-spacing: 0.02em;
     line-height: 1;
     margin-bottom: 0.5rem;
   }
 
   .step-theme {
-    font-size: 0.78rem;
-    color: var(--light-violet);
+    font-size: var(--fs-small);
+    color: var(--white);
     margin-bottom: 1rem;
-    font-style: italic;
+    
   }
 
   .step-desc {
-    font-size: 0.85rem;
-    color: rgba(245,242,238,0.75);
+    font-size: var(--fs-small);
+    color: var(--white);
     line-height: 1.65;
   }
 
@@ -1401,15 +1403,15 @@
   .event-day {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 3rem;
+    font-size: var(--fs-large);
     line-height: 1;
     color: var(--neon);
   }
 
   .event-month {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
@@ -1426,7 +1428,7 @@
   }
 
   .event-title {
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     font-weight: 500;
     margin-bottom: 0.3rem;
     color: var(--white);
@@ -1434,7 +1436,7 @@
 
   .event-meta {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.7);
+    color: var(--white);
   }
 
   .event-action {
@@ -1449,7 +1451,7 @@
     border: 1px solid var(--neon);
     color: var(--neon);
     padding: 0.6rem 1.4rem;
-    font-size: 0.75rem;
+    font-size: var(--fs-small);
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1464,8 +1466,8 @@
   }
 
   .btn-register.soon {
-    border-color: var(--mid);
-    color: var(--mid);
+    border-color: var(--white);
+    color: var(--white);
     pointer-events: none;
   }
 
@@ -1508,8 +1510,8 @@
   .ecosystem-text .section-title { margin-bottom: 1.5rem; }
 
   .ecosystem-body {
-    font-size: 0.95rem;
-    color: rgba(245,242,238,0.88);
+    font-size: var(--fs-body);
+    color: var(--white);
     line-height: 1.75;
     margin-bottom: 2rem;
   }
@@ -1531,8 +1533,8 @@
     padding: 1.2rem 1rem;
     text-align: center;
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     letter-spacing: 0.05em;
     transition: background 0.2s, color 0.2s;
   }
@@ -1560,7 +1562,7 @@
 
   .footer-logo {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1568,7 +1570,7 @@
 
   .footer-sub {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.65);
+    color: var(--white);
   }
 
   .footer-links {
@@ -1579,7 +1581,7 @@
 
   .footer-links a {
     font-size: var(--fs-small);
-    color: rgba(245,242,238,0.65);
+    color: var(--white);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -1625,8 +1627,8 @@
     right: 1.5rem;
     background: none;
     border: none;
-    color: var(--mid);
-    font-size: 1.2rem;
+    color: var(--white);
+    font-size: var(--fs-body);
     cursor: pointer;
     transition: color 0.2s;
   }
@@ -1635,7 +1637,7 @@
 
   .modal-tag {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: var(--fs-small);
     color: var(--neon);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1645,14 +1647,14 @@
   .modal-title {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 2rem;
+    font-size: var(--fs-medium);
     margin-bottom: 1rem;
     line-height: 1;
   }
 
   .modal-desc {
-    font-size: 0.88rem;
-    color: rgba(245,242,238,0.88);
+    font-size: var(--fs-body);
+    color: var(--white);
     line-height: 1.65;
     margin-bottom: 2rem;
   }
@@ -1669,12 +1671,12 @@
     color: var(--white);
     padding: 0.8rem 1rem;
     font-family: var(--font-body);
-    font-size: 0.88rem;
+    font-size: var(--fs-body);
     outline: none;
     transition: border-color 0.2s;
   }
 
-  .modal-input::placeholder { color: var(--mid); }
+  .modal-input::placeholder { color: var(--white); }
   .modal-input:focus { border-color: var(--neon); }
 
   .modal-submit {
@@ -1683,7 +1685,7 @@
     border: none;
     padding: 0.9rem;
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1697,8 +1699,8 @@
   }
 
   .modal-note {
-    font-size: 0.72rem;
-    color: var(--mid);
+    font-size: var(--fs-small);
+    color: var(--white);
     text-align: center;
   }
 
@@ -1791,8 +1793,8 @@
     bottom: 1.2rem;
     left: 1.5rem;
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: rgba(245,242,238,0.6);
+    font-size: var(--fs-small);
+    color: var(--white);
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
@@ -1814,7 +1816,7 @@
     color: var(--dark);
     padding: 0.85rem 1.6rem;
     font-family: var(--font-body);
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1845,7 +1847,7 @@
       bottom: 1.2rem;
       right: 1.2rem;
       padding: 0.75rem 1.2rem;
-      font-size: 0.75rem;
+      font-size: var(--fs-small);
     }
   }
 
@@ -2173,7 +2175,7 @@
 
     </div>
 
-    <p style="margin-top:2rem; font-size:0.78rem; color:var(--mid); font-family:'DM Mono',monospace; letter-spacing:0.05em;">
+    <p style="margin-top:2rem; font-size:0.78rem; color:var(--white); font-family:'DM Mono',monospace; letter-spacing:0.05em;">
       Weitere Termine folgen. Trag Dich in die Liste ein, um als Erstes informiert zu werden. →
       <button onclick="openModal('newsletter')" style="background:none;border:none;color:var(--neon);cursor:pointer;font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.05em;text-decoration:underline;text-underline-offset:3px;">Hier eintragen</button>
     </p>
@@ -2217,7 +2219,7 @@
 <footer>
   <div class="footer-brand">
     <div class="footer-logo">beyond electronics</div>
-    <div class="footer-sub">Ein Format von beyond economy / Sym · <a href="https://www.beyond-economy.eco" style="color:var(--mid);text-decoration:none;">www.beyond-economy.eco</a></div>
+    <div class="footer-sub">Ein Format von beyond economy / Sym · <a href="https://www.beyond-economy.eco" style="color:var(--white);text-decoration:none;">www.beyond-economy.eco</a></div>
   </div>
   <ul class="footer-links">
     <li><a href="https://www.symtronics.eco">Symtronics</a></li>
